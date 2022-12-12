@@ -1,0 +1,41 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.GetFitNav" parent="Theme.AppCompat.Light.NoActionBar">
+ <item name="android:windowActionBar">false</item>  <!--       to disable default action bar-->
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">#000000</item>
+        <item name="android:itemBackground">@color/gray_white</item>
+<!--        <item name="android:itemTextAppearance">@style/CustomTextMenu</item>-->
+        <item name="android:fontFamily">@font/sen</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+<!--    For toolbar-->
+<style name="Toolbar">
+    <item name="android:toolbarStyle">@color/black</item>
+</style>
+<!--    light mode for background -->
+    <style name="Screen">
+        <item name="android:background">@color/white</item>
+    </style>
+
+<!--    For text -->
+
+<!--    for Button-->
+    <style name="Button">
+        <item name="android:background">@color/green</item>
+        <item name="android:textColor">@color/gray_white</item>
+    </style>
+
+<!--<style name="CustomTextMenu" parent="@android:style/TextAppearance.Widget.IconMenu.Item">-->
+<!--<item name="android:textColor">@color/teal_700 </item>-->
+<!--</style>-->
+</resources>

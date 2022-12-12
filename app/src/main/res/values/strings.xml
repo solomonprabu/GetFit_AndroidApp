@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">GetFit</string>
+    <string name="navigation_drawer_open">Open Navigation Drawer</string>
+    <string name="navigation_drawer_close">Close Navigation Drawer</string>
+    <string name="bmi_calculator">BMI Calculator</string>
+
+</resources>

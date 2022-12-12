@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:layoutDirection="ltr"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/textHeight"
+            android:fontFamily="@font/sen"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_margin="3dp"
+            android:background="@drawable/user_item_bg"
+            android:gravity="center"
+            android:inputType="numberDecimal"
+            android:hint="Enter Your Height"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/textWeight"
+            android:fontFamily="@font/sen"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:inputType="numberDecimal"
+            android:layout_margin="3dp"
+            android:background="@drawable/user_item_bg"
+            android:gravity="center"
+            android:hint="Enter your weight"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonAdd_detail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15sp"
+            android:background="@color/green"
+            android:text="Add"
+            android:fontFamily="@font/sen"
+            android:textColor="@android:color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonCancel_add"
+            android:fontFamily="@font/sen"
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:layout_marginTop="5dp"
+            android:background="@color/black"
+            android:text="Cancel"
+            android:textColor="@android:color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

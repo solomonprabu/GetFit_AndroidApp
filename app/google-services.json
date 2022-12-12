@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "900125564317",
+    "firebase_url": "https://getfit-89714-default-rtdb.firebaseio.com",
+    "project_id": "getfit-89714",
+    "storage_bucket": "getfit-89714.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:900125564317:android:cddaad422e016b16d1e374",
+        "android_client_info": {
+          "package_name": "com.example.application"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "900125564317-ut1jv0orgue0ddqr7l2gl1vps89meapa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6P4_UVMa6UNNHz-thRhCD_XDaBLMRPCQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "900125564317-sk06gn2frdbr98mjldeuchvhanqvr1m7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:900125564317:android:b0d31aaa6f10aa9fd1e374",
+        "android_client_info": {
+          "package_name": "com.example.getfitnav"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "900125564317-ut1jv0orgue0ddqr7l2gl1vps89meapa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6P4_UVMa6UNNHz-thRhCD_XDaBLMRPCQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "900125564317-sk06gn2frdbr98mjldeuchvhanqvr1m7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:900125564317:android:c11aeeb2b5b9b710d1e374",
+        "android_client_info": {
+          "package_name": "com.example.google_login_vishwanath"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "900125564317-ut1jv0orgue0ddqr7l2gl1vps89meapa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6P4_UVMa6UNNHz-thRhCD_XDaBLMRPCQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "900125564317-sk06gn2frdbr98mjldeuchvhanqvr1m7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/bg_white"
+    android:orientation="vertical"
+    android:padding="20sp"
+    android:layout_margin="30sp"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/Height_display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:fontFamily="@font/sen"
+        android:textSize="25sp"
+        android:layout_margin="10sp"
+        android:text="Height"/>
+
+    <TextView
+        android:id="@+id/Weight_display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:fontFamily="@font/sen"
+        android:textSize="25sp"
+        android:layout_margin="10sp"
+        android:text="Weight"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/blue"
+            android:text="UPDATE"/>
+    </LinearLayout>
+
+</LinearLayout>
