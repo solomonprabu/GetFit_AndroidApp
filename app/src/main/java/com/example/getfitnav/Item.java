@@ -5,7 +5,10 @@ public class Item {
     private String imageUri, recipeLabel;
     private int calories,fatQuantity,carbsQuantity,ProteinQuantity;
 
-    public Item(String imageUri, String recipeLabel, int calories, int fatQuantity, int carbsQuantity, int ProteinQuantity){ //
+    public Item() {
+    }
+
+    public Item(String imageUri, String recipeLabel, int calories, int fatQuantity, int carbsQuantity, int ProteinQuantity){
         this.imageUri = imageUri;
         this.recipeLabel = recipeLabel;
         this.calories = calories;

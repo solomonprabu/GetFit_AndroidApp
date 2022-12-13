@@ -64,25 +64,25 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostHolder> {
             imageView = view.findViewById(R.id.imageview);
             Glide.with(context).load(url).into(imageView);
         }
-        public void setmcalories(int likes){
+        public void setmcalories(int calorie){
             mcalories = view.findViewById(R.id.calories);
-            mcalories.setText(likes + "g calories");
+            mcalories.setText(calorie + "J calories");
         }
         public void setmTags(String tag){
             mTags = view.findViewById(R.id.tags);
             mTags.setText(tag);
         }
-        public void setmprotein(int tag){
+        public void setmprotein(int protien){
             mprotein = view.findViewById(R.id.protein);
-            mprotein.setText(tag+ "g proteins");
+            mprotein.setText(protien+ "g proteins");
         }
-        public void setmfat(int tag){
+        public void setmfat(int fat){
             mfat = view.findViewById(R.id.fat);
-            mfat.setText(tag+ "g fat");
+            mfat.setText(fat+ "g fat");
         }
-        public void setmcarbs(int tag){
+        public void setmcarbs(int carbs){
             mcarbs = view.findViewById(R.id.carbs);
-            mcarbs.setText(tag+ "g carbhohydrates");
+            mcarbs.setText(carbs+ "g carbhohydrates");
         }
 
     }
