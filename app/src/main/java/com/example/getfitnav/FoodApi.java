@@ -58,7 +58,7 @@ public class FoodApi extends AppCompatActivity implements NavigationView.OnNavig
     private List<Item> mList;
 
     EditText foodInput;
-    Button foodButton;
+    Button foodButton,clearButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,6 +70,8 @@ public class FoodApi extends AppCompatActivity implements NavigationView.OnNavig
         drawerLayout = findViewById(R.id.drawerLayout);
         navigationView = findViewById(R.id.nav_view);
         toolbar = findViewById(R.id.toolbar);
+
+        clearButton = findViewById(R.id.clear_button);
 
 
         //        -------------------------Toolbar code ----------------------
@@ -163,7 +165,7 @@ public class FoodApi extends AppCompatActivity implements NavigationView.OnNavig
                             recyclerView.setAdapter(adapter);
                             adapter.notifyDataSetChanged();
 
-                            foodInput.setText("");
+
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -177,6 +179,15 @@ public class FoodApi extends AppCompatActivity implements NavigationView.OnNavig
 
                 RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
                 requestQueue.add(stringRequest);
+            }
+        });
+
+        clearButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                foodInput.setText("");
+                mList.clear();
             }
         });
 
