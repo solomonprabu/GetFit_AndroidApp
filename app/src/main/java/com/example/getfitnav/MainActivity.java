@@ -1,5 +1,6 @@
 package com.example.getfitnav;
 
+import static com.example.getfitnav.R.id.acc_Id;
 import static com.example.getfitnav.R.id.nav_view;
 
 import androidx.annotation.NonNull;
@@ -12,6 +13,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -34,7 +36,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     DrawerLayout drawerLayout;
     Toolbar toolbar;
 
-    TextView name, mail;
+    TextView name, mail,Acc_Id;
     Button logout;
 
     GoogleSignInOptions gso;
@@ -55,6 +57,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         name = findViewById(R.id.name);
         mail = findViewById(R.id.mail);
         logout = findViewById(R.id.logout);
+        Acc_Id = findViewById(R.id.acc_Id);
 
         //        -------------------------Toolbar code ----------------------
         setSupportActionBar(toolbar);
@@ -78,12 +81,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
 
+
+
         if (account != null){
             String Name = account.getDisplayName();
             String Mail = account.getEmail();
+            String Id = account.getId();
 
             name.setText(Name);
             mail.setText(Mail);
+            Acc_Id.setText(Id);
 
         }
 

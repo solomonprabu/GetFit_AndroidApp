@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace 'com.example.getfitnav'
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.example.getfitnav"
         minSdk 23
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
@@ -44,7 +44,6 @@ dependencies {
     implementation 'com.android.volley:volley:1.2.1'
     implementation 'com.github.bumptech.glide:glide:4.14.2'
 
-    implementation 'com.airbnb.android:lottie:5.2.0'
     implementation 'com.google.firebase:firebase-database:20.1.0'
     implementation 'com.google.firebase:firebase-firestore:24.4.1'
 
