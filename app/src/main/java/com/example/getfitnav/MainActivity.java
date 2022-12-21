@@ -1,5 +1,6 @@
 package com.example.getfitnav;
 
+import static com.example.getfitnav.R.id.bmicard;
 import static com.example.getfitnav.R.id.nav_view;
 
 import androidx.annotation.NonNull;
@@ -7,6 +8,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
@@ -51,7 +53,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout = findViewById(R.id.drawerLayout);
         navigationView = findViewById(R.id.nav_view);
         toolbar = findViewById(R.id.toolbar);
-
+        CardView imagesCard,BmiCard,FoodCard,addFoodcard;
 
         //        -------------------------Toolbar code ----------------------
         setSupportActionBar(toolbar);
@@ -75,8 +77,44 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
 
+        imagesCard = findViewById(R.id.imageCard);
+        imagesCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, MyAccount.class);
+                startActivity(intent);
+            }
+        });
+
+        BmiCard = findViewById(R.id.bmicard);
+        BmiCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent n = new Intent(MainActivity.this, BMI.class);
+                startActivity(n);
+            }
+        });
+
+        FoodCard = findViewById(R.id.foodCard);
+        FoodCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, FoodApi.class);
+                startActivity(i);
+            }
+        });
+        addFoodcard= findViewById(R.id.addFoodCard);
+        addFoodcard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent f = new Intent(MainActivity.this, AddIntake.class);
+                startActivity(f);
+            }
+        });
 
     }
+
+
 
     @Override
     public void onBackPressed() {

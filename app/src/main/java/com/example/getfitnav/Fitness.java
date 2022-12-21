@@ -131,7 +131,7 @@ public class Fitness extends AppCompatActivity implements NavigationView.OnNavig
 //----------------------------------Amount of Calories to intake calculation----------------------------------
         int thin_intake = (int) (GlobalVariable.weightglobal * 2.2 * 10);
         TextView thin_fat = findViewById(R.id.fat_disp);
-        thin_fat.setText("Your daily calorie intake should be :"+thin_intake+" grams");
+        thin_fat.setText("Your calorie intake should be :"+thin_intake+" grams");
 //        -------------------------------------Ratio to intake---------------------------------------------
 //        -------------------------------------------Protien intake--------------------------------------
         int protien_percentage = thin_intake*30/100;
@@ -159,7 +159,7 @@ public class Fitness extends AppCompatActivity implements NavigationView.OnNavig
 //----------------------------------Amount of Calories to intake calculation----------------------------------
         int fat_intake = (int) (GlobalVariable.weightglobal * 2.2 * 12);
         TextView thin_fat = findViewById(R.id.fat_disp);
-        thin_fat.setText("Your daily calorie intake should be :"+fat_intake+" grams");
+        thin_fat.setText("Your calorie intake should be :"+fat_intake+" grams");
 
         int protien_percentage = fat_intake*30/100;
         TextView protien = findViewById(R.id.protien_percentage);

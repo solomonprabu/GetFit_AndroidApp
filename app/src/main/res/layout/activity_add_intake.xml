@@ -106,7 +106,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="20dp"
                     android:background="@drawable/custom_edittext"
-                    android:backgroundTint="@color/white"
+                    android:backgroundTint="@color/bg_white"
                     android:fontFamily="@font/sen"
                     android:gravity="center"
                     android:hint="Enter the amount of fat in grams"

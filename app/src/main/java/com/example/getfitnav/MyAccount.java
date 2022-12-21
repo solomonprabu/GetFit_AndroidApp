@@ -47,7 +47,7 @@ public class MyAccount extends AppCompatActivity implements NavigationView.OnNav
     DrawerLayout drawerLayout;
     Toolbar toolbar;
 
-    TextView name, mail;
+    TextView name, mail,Acc_Id;
     Button logout,addButton,viewButton;
 
     GoogleSignInOptions gso;
@@ -69,7 +69,7 @@ public class MyAccount extends AppCompatActivity implements NavigationView.OnNav
         logout = findViewById(R.id.logout);
         addButton = findViewById(R.id.addF_btn);
         viewButton = findViewById(R.id.viewIntake_btn);
-//        Acc_Id = findViewById(R.id.acc_Id);
+        Acc_Id = findViewById(R.id.acc_Id);
 
         //        -------------------------Toolbar code ----------------------
         setSupportActionBar(toolbar);
@@ -97,9 +97,9 @@ public class MyAccount extends AppCompatActivity implements NavigationView.OnNav
             String Mail = account.getEmail();
             String Id = account.getId();
 
-            name.setText(Name);
-            mail.setText(Mail);
-//            Acc_Id.setText(Id);
+            name.setText("Name: "+Name);
+            mail.setText("Mail: "+Mail);
+            Acc_Id.setText("ID: "+Id);
 
         }
 
