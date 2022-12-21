@@ -15,6 +15,20 @@
         android:theme="@style/Theme.GetFitNav"
         tools:targetApi="31">
         <activity
+            android:name=".AddIntake"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ViewIntake"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".FoodApi"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.NoActionBar">
@@ -37,7 +51,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".Fitness"
             android:exported="false"

@@ -1,6 +1,5 @@
 package com.example.getfitnav;
 
-import static com.example.getfitnav.R.id.acc_Id;
 import static com.example.getfitnav.R.id.food_name;
 import static com.example.getfitnav.R.id.nav_view;
 
@@ -16,6 +15,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -47,16 +47,12 @@ public class MyAccount extends AppCompatActivity implements NavigationView.OnNav
     DrawerLayout drawerLayout;
     Toolbar toolbar;
 
+    TextView name, mail;
+    Button logout,addButton,viewButton;
+
     GoogleSignInOptions gso;
     GoogleSignInClient gsc;
 
-    FirebaseFirestore firestore;
-    FirebaseAuth firebaseAuth;
-    FirebaseUser firebaseUser;
-//    String check="";
-
-    EditText foodname,proteinIntake,fatIntake,carbsIntake;
-    Button addIntake;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,12 +64,13 @@ public class MyAccount extends AppCompatActivity implements NavigationView.OnNav
         navigationView = findViewById(R.id.nav_view);
         toolbar = findViewById(R.id.toolbar);
 
-        foodname = findViewById(R.id.food_name);
-        proteinIntake = findViewById(R.id.protein_intake);
-        fatIntake = findViewById(R.id.fat_intake);
-        carbsIntake = findViewById(R.id.carbs_intake);
+        name = findViewById(R.id.name);
+        mail = findViewById(R.id.mail);
+        logout = findViewById(R.id.logout);
+        addButton = findViewById(R.id.addF_btn);
+        viewButton = findViewById(R.id.viewIntake_btn);
+//        Acc_Id = findViewById(R.id.acc_Id);
 
-        addIntake = findViewById(R.id.add_button);
         //        -------------------------Toolbar code ----------------------
         setSupportActionBar(toolbar);
 
@@ -95,56 +92,40 @@ public class MyAccount extends AppCompatActivity implements NavigationView.OnNav
 
         GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
 
-
-
+        if (account != null){
+            String Name = account.getDisplayName();
+            String Mail = account.getEmail();
             String Id = account.getId();
 
-//-----------------------------------------Firebase-------------------------------------
-        firestore=FirebaseFirestore.getInstance();
-        firebaseAuth=FirebaseAuth.getInstance();
-        firebaseUser=firebaseAuth.getCurrentUser();
+            name.setText(Name);
+            mail.setText(Mail);
+//            Acc_Id.setText(Id);
 
-        addIntake.setOnClickListener(new View.OnClickListener() {
+        }
+
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SignOut();
+            }
+        });
+
+        addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String foodnameEnt = foodname.getText().toString();
-                String proteinIntakeEnt  = proteinIntake.getText().toString();
-                String fatIntakeEnt  = fatIntake.getText().toString();
-                String carbsIntakeEnt  = carbsIntake.getText().toString();
-
-                SimpleDateFormat SDF = new SimpleDateFormat("dd-MM-yyyy  HH:mm:SS", Locale.getDefault());
-                String CurrentDate = SDF.format(new Date());
-
-//                String id = UUID.randomUUID().toString();
-                Map<String,Object> transaction=new HashMap<>();
-                transaction.put("id",Id);
-                transaction.put("Food Name",foodnameEnt);
-                transaction.put("Carbhohydrates",carbsIntakeEnt);
-                transaction.put("Fat",fatIntakeEnt);
-                transaction.put("Protein",proteinIntakeEnt);
-                transaction.put("time",CurrentDate);
-
-                firestore.collection("Intakes").add(transaction).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-                    @Override
-                    public void onSuccess(DocumentReference documentReference) {
-                        Toast.makeText(MyAccount.this, "Added", Toast.LENGTH_SHORT).show();
-                        foodname.setText("");
-                        proteinIntake.setText("");
-                        fatIntake.setText("");
-                        carbsIntake.setText("");
-
-                    }
-                })
-                        .addOnFailureListener(new OnFailureListener() {
-                            @Override
-                            public void onFailure(@NonNull Exception e) {
-                                Toast.makeText(MyAccount.this, e.getMessage(), Toast.LENGTH_SHORT).show();
-                            }
-                        });
-
+                Intent n = new Intent(MyAccount.this,AddIntake.class);
+                startActivity(n);
+            }
+        });
+        viewButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MyAccount.this,ViewIntake.class);
+                startActivity(i);
             }
         });
     }
+
 
 
     @Override
@@ -205,4 +186,4 @@ public class MyAccount extends AppCompatActivity implements NavigationView.OnNav
         });
     }
 }
-  //  --------------------------------------MainCode--------------------//
+

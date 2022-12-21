@@ -25,7 +25,9 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        style="@style/Screen"
+        android:background="@drawable/gradient">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -42,142 +44,132 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#00008577"
+            android:background="@color/black"
             android:backgroundTint="@color/black"
             android:minHeight="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme"
-            app:navigationIcon="@drawable/ic_baseline_menu_24" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/ic_baseline_menu_24"
+            style="@style/Toolbar"/>
 
     </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            app:layout_constraintTop_toTopOf="parent">
-
-
-        <androidx.cardview.widget.CardView
+            android:id="@+id/linear_dashboard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="15dp"
+            android:background="#edffffff"
+            android:gravity="center"
             android:orientation="vertical"
-            app:cardCornerRadius="10dp"
-            app:cardElevation="20dp">
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.162">
 
-            <LinearLayout
-                android:id="@+id/lin"
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_height="260dp"
+                android:layout_margin="15dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="20dp">
+
+                <LinearLayout
+                    android:id="@+id/li"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/wel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="15dp"
+                        android:fontFamily="@font/sen"
+                        android:gravity="center"
+                        android:text="Welcome"
+                        android:textColor="@color/green"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="15dp"
+                        android:fontFamily="@font/sen"
+                        android:gravity="center"
+                        android:text="Login"
+                        android:textColor="@color/white"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/mail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/name"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="15dp"
+                        android:fontFamily="@font/sen"
+                        android:gravity="center"
+                        android:text="Error..!"
+                        android:textColor="@color/white"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/logout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/mail"
+                        android:layout_margin="15dp"
+                        android:background="@drawable/custom_edittext"
+                        android:backgroundTint="@color/red"
+                        android:minHeight="58dp"
+                        android:padding="8dp"
+                        android:text="Logout"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <Button
+                android:id="@+id/addF_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#edffffff"
-                android:gravity="center"
-                android:orientation="vertical"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.5">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
-                    android:fontFamily="@font/sen"
-                    android:text="ADD YOUR INTAKES"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textSize="30sp"
-                    android:textStyle="bold" />
-
-                <EditText
-                    android:id="@+id/food_name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
-                    android:background="@drawable/custom_edittext"
-                    android:backgroundTint="@color/white"
-                    android:fontFamily="@font/sen"
-                    android:gravity="center"
-                    android:hint="Enter the food name"
-                    android:inputType="text"
-                    android:minHeight="48dp"
-                    android:padding="8dp"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textColorHint="@color/black"
-                    android:textSize="40px" />
-
-                <EditText
-                    android:id="@+id/protein_intake"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
-                    android:background="@drawable/custom_edittext"
-                    android:backgroundTint="@color/white"
-                    android:fontFamily="@font/sen"
-                    android:gravity="center"
-                    android:hint="Enter the amount of protein in grams"
-                    android:inputType="numberDecimal"
-                    android:minHeight="48dp"
-                    android:padding="8dp"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textColorHint="@color/black"
-                    android:textSize="40px" />
-
-                <EditText
-                    android:id="@+id/carbs_intake"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
-                    android:background="@drawable/custom_edittext"
-                    android:backgroundTint="@color/white"
-                    android:fontFamily="@font/sen"
-                    android:gravity="center"
-                    android:hint="Enter the amount of Carbhohydrates"
-                    android:inputType="numberDecimal"
-                    android:minHeight="48dp"
-                    android:padding="8dp"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textColorHint="@color/black"
-                    android:textSize="40px" />
-
-                <EditText
-                    android:id="@+id/fat_intake"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
-                    android:background="@drawable/custom_edittext"
-                    android:backgroundTint="@color/white"
-                    android:fontFamily="@font/sen"
-                    android:gravity="center"
-                    android:hint="Enter the amount of fat in grams"
-                    android:inputType="numberDecimal"
-                    android:minHeight="48dp"
-                    android:padding="8dp"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textColorHint="@color/black"
-                    android:textSize="40px" />
-
-                <Button
-                    android:id="@+id/add_button"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
-                    android:background="@drawable/custom_edittext"
-                    android:backgroundTint="@color/green"
-                    android:padding="8dp"
-                    android:text="ADD"
-                    android:textColor="@color/white"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
+                android:layout_margin="15dp"
+                android:background="@drawable/custom_edittext"
+                android:backgroundTint="@color/green"
+                android:minHeight="58dp"
+                android:padding="8dp"
+                android:text="ADD"
+                android:fontFamily="@font/sen"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                />
+            <Button
+                android:id="@+id/viewIntake_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:fontFamily="@font/sen"
+                android:background="@drawable/custom_edittext"
+                android:backgroundTint="@color/navyBlue"
+                android:minHeight="58dp"
+                android:padding="8dp"
+                android:text="VIEW INTAKE"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                />
         </LinearLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.drawerlayout.widget.DrawerLayout>
