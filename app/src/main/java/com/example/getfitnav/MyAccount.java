@@ -98,7 +98,7 @@ public class MyAccount extends AppCompatActivity implements NavigationView.OnNav
             String Id = account.getId();
 
             name.setText("Name: "+Name);
-            mail.setText("Mail: "+Mail);
+            mail.setText(Mail);
             Acc_Id.setText("ID: "+Id);
 
         }

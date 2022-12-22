@@ -29,32 +29,33 @@
         style="@style/Screen"
         android:background="@drawable/gradient">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="659dp"
-        android:background="@color/navyBlue"
-        android:orientation="vertical"
-        app:layout_constraintVertical_bias="0.0"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="-1dp">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar_bmi"
-            style="@style/Toolbar"
-            android:background="@color/black"
+        <LinearLayout
+            android:id="@+id/line_toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/black"
-            android:minHeight="?attr/actionBarSize"
-            android:theme="?attr/actionBarTheme"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="659dp"
+            android:background="@color/black"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:navigationIcon="@drawable/ic_baseline_menu_24"/>
+            app:layout_constraintVertical_bias="0.0"
+            tools:layout_editor_absoluteX="-1dp">
 
-    </LinearLayout>
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00008577"
+                android:backgroundTint="@color/black"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:navigationIcon="@drawable/ic_baseline_menu_24" />
+
+
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/linear_dashboard"
@@ -127,7 +128,7 @@
                     <TextView
                         android:id="@+id/acc_Id"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_below="@+id/name"
                         android:layout_centerHorizontal="true"
                         android:layout_margin="15dp"

@@ -46,7 +46,7 @@
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar_bmi"
             style="@style/Toolbar"
-            android:background="@color/black"
+            android:background="@color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/black"
