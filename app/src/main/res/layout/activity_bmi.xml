@@ -9,7 +9,6 @@
     tools:context=".BMI"
     android:fitsSystemWindows="true"
     tools:openDrawer="start"
-
     android:theme="@style/Theme.AppCompat.NoActionBar">
 
     <com.google.android.material.navigation.NavigationView

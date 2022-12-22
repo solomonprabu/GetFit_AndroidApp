@@ -35,24 +35,24 @@
         android:layout_marginBottom="659dp"
         android:background="@color/navyBlue"
         android:orientation="vertical"
+        app:layout_constraintVertical_bias="0.0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
         tools:layout_editor_absoluteX="-1dp">
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
+            android:id="@+id/toolbar_bmi"
+            style="@style/Toolbar"
+            android:background="@color/black"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/black"
             android:backgroundTint="@color/black"
             android:minHeight="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:navigationIcon="@drawable/ic_baseline_menu_24"
-            style="@style/Toolbar"/>
+            app:navigationIcon="@drawable/ic_baseline_menu_24"/>
 
     </LinearLayout>
 
@@ -68,7 +68,7 @@
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.162">
+            app:layout_constraintVertical_bias="0.3">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
